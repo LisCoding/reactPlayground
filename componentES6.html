@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js">
+    </script>
+    <title>Components with ES6</title>
+  </head>
+  <body>
+    <div id="component-one">
+    </div>
+    <div id="component-two">
+    </div>
+    <script type="text/babel">
+      class FirstComponent extends React.Component {
+      render () {
+        return <div>
+          <h1>I love Coding</h1>
+          <p>because it is.....</p>
+          <ul>
+            <li>FUN </li>
+            <li>CREATIVE</li>
+            <li>ADDICTIVE</li>
+          </ul>
+        </div>
+      }
+    }
+    class SecondComponent extends React.Component {
+      render (){
+        return <div>
+                  <h3>My favorite Languages are:</h3>
+                  <ol>
+                    <li>Swift</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                  </ol>
+               </div>
+      }
+    }
+    ReactDOM.render(<FirstComponent/>, document.getElementById("component-one"))
+    ReactDOM.render(<SecondComponent/>, document.getElementById("component-two"))
+    </script>
+
+
+  </body>
+</html>
