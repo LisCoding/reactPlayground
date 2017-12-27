@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js">
+    </script>
+    <title>Learning Components</title>
+  </head>
+  <body>
+    <div id="react-component">
+    </div>
+    <div id="second-component">
+    </div>
+
+    <script type="text/babel">
+      var MyComponent = React.createClass({
+        render(){
+          return <div>
+                  <h1> Hello Liseth</h1>
+                  <p> This is my first Component</p>
+                </div>
+        }
+      })
+
+      var MySecondComponent = React.createClass({
+        render(){
+          return <div>
+                  <h1> Hello Alex!</h1>
+                  <p> This is Second Component</p>
+                  <ul>
+                    <li>Fun</li>
+                    <li>play</li>
+                  </ul>
+                </div>
+        }
+      })
+      ReactDOM.render(<MyComponent/>, document.getElementById("react-component"))
+      ReactDOM.render(<MySecondComponent/>, document.getElementById("second-component"))
+    </script>
+  </body>
+</html>
